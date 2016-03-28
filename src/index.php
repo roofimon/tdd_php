@@ -16,7 +16,6 @@ $container['captcha'] = function($container) {
 $app = new \Slim\App($container);
 
 $app->get('/hello/{name}', function (Request $request, Response $response) {
-    //var_dump($this);
     $name = $request->getAttribute('name');
     $captcha = $this->captcha;
     $left = $captcha->getLeftOperand();
