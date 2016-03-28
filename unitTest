@@ -1,1 +1,1 @@
-./vendor/bin/phpunit --configuration phpunit.xml --testsuite UnitTest
+./vendor/bin/phpunit  --testsuite UnitTest
