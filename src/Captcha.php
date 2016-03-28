@@ -9,12 +9,9 @@ class Captcha {
     if($this->pattern == 1){
       return $this->left;
     }else{
-      if($this->left == 1)
-        return "One";
-      if($this->left == 2)
-        return "Two";
+      $mapping = array("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine");
+      return $mapping[$this->left-1];
     }
   }
-
 }
 ?>
