@@ -1,6 +1,6 @@
 <?php
 use \Slim\Http\Environment;
-class IntegrationTest extends \PHPUnit_Framework_TestCase
+class RoutingFunctionalTest extends \PHPUnit_Framework_TestCase
 {
   public function testRouteFoo()
   {
