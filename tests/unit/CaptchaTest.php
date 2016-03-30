@@ -1,22 +1,28 @@
 <?php
-class CaptchaTest extends PHPUnit_Framework_TestCase {
-  public function testFirstPatternLeftShouldBe1() {
+class CaptchaTest extends PHPUnit_Framework_TestCase
+{
+  public function testFirstPatternLeftShouldBe1()
+  {
     $captcha = new Captcha(1, 1, 1, 1);
     assertThat("1", is(equalTo($captcha->getLeftOperand())));
   }
-  public function testFirstPatternLeftShouldBe2() {
+  public function testFirstPatternLeftShouldBe2()
+  {
     $captcha = new Captcha(1, 2, 1, 1);
     assertThat("2", is(equalTo($captcha->getLeftOperand())));
   }
-  public function testFirstPatternLeftShouldBe9() {
+  public function testFirstPatternLeftShouldBe9()
+  {
     $captcha = new Captcha(1, 9, 1, 1);
     assertThat("9", is(equalTo($captcha->getLeftOperand())));
   }
-  public function testSecondPatternLeftShouldBeOne() {
+  public function testSecondPatternLeftShouldBeOne()
+  {
     $captcha = new Captcha(2, 1, 1, 1);
     assertThat("One", is(equalTo($captcha->getLeftOperand())));
   }
-  public function testSecondPatternLeftShouldBeTwo() {
+  public function testSecondPatternLeftShouldBeTwo()
+  {
     $captcha = new Captcha(2, 2, 1, 1);
     assertThat("Two", is(equalTo($captcha->getLeftOperand())));
   }

@@ -1,11 +1,14 @@
 <?php
-class Captcha {
-  function __construct($pattern, $left, $operator, $right) {
+class Captcha
+{
+  function __construct($pattern, $left, $operator, $right)
+  {
     $this->pattern = $pattern;
     $this->left = $left;
   }
 
-  function getLeftOperand() {
+  function getLeftOperand()
+  {
     if($this->pattern == 1){
       return $this->left;
     }else{
