@@ -2,23 +2,16 @@
 use \Slim\Http\Environment;
 class IntegrationTest extends \PHPUnit_Framework_TestCase
 {
-  public function testFail()
+  public function testRouteFoo()
   {
-    $container = new \Slim\Container;
+    require __DIR__.'/../../src/routing.php';
     $container['environment'] = function () {
         return Environment::mock([
-            'SCRIPT_NAME' => '/index.php',
             'REQUEST_URI' => '/foo',
             'REQUEST_METHOD' => 'GET'
         ]);
     };
-    $app = new \Slim\App($container);
-
-
-    $app->get('/foo', function ($req, $res) {
-        return $res->write("Halt");
-    });
-    // Invoke app
+    $app->set['container'] = $container;
     ob_start();
     $app->run();
     $output = ob_get_clean();
