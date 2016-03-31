@@ -14,7 +14,7 @@ $container['captchaService'] = function($container)
 $container['captchaController'] = function($container)
 {
     $captchaService = $container->get('captchaService');
-    return new EchoAction($captchaService);
+    return new CaptchaController($captchaService);
 };
 
 $app = new \Slim\App($container);
