@@ -15,7 +15,7 @@ class RoutingFunctionalTest extends \PHPUnit_Framework_TestCase
     ob_start();
     $app->run();
     $output = ob_get_clean();
-    $this->assertEquals('Halt', $output);
+    $this->assertEquals('2 2 2', $output);
   }
 }
 ?>

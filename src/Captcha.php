@@ -5,6 +5,8 @@ class Captcha
   {
     $this->pattern = $pattern;
     $this->left = $left;
+    $this->operator = $operator;
+    $this->right = $right;
   }
 
   function getLeftOperand()
@@ -15,6 +17,11 @@ class Captcha
       $mapping = array("One", "Two", "Three", "Four", "Five", "Six", "Seven", "Eight", "Nine");
       return $mapping[$this->left-1];
     }
+  }
+
+  function toString()
+  {
+      return $this->left.' '.$this->operator.' '.$this->right;
   }
 }
 ?>

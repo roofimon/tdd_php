@@ -8,7 +8,7 @@ class CaptchaService
     }
 
     public function getCaptcha()
-    {
+    {    
         return new Captcha($this->pattern, 2, 2, 2);
     }
 }
