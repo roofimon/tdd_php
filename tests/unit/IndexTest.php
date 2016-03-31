@@ -17,16 +17,6 @@ class RouteTest extends \PHPUnit_Framework_TestCase
 {
     public function testInvokeWhenReturningAResponse()
     {
-      $action = new EchoAction();
-      $environment = \Slim\Http\Environment::mock([
-          'REQUEST_METHOD' => 'GET',
-          'REQUEST_URI' => '/echo',
-          'QUERY_STRING'=>'foo=bar']
-      );
-      $request = \Slim\Http\Request::createFromEnvironment($environment);
-      $response = new \Slim\Http\Response();
-      $response = $action($request, $response, []);
-      $this->assertSame((string)$response->getBody(), json_encode(['key' => 'value']));
     }
  }
 ?>
