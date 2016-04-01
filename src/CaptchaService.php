@@ -5,11 +5,14 @@ class CaptchaService
     {
         $this->randomizer = $randomizer;
         $this->pattern = $this->randomizer->getPattern();
+        $this->left = $this->randomizer->getOperand();
+        $this->operator = $this->randomizer->getOperator();
+        $this->right = $this->randomizer->getOperand();
     }
 
     public function getCaptcha()
-    {    
-        return new Captcha($this->pattern, 2, 2, 2);
+    {
+        return new Captcha($this->pattern, $this->left, $this->operator, $this->right);
     }
 }
 ?>
