@@ -3,7 +3,9 @@ class CaptchaTest extends PHPUnit_Framework_TestCase
 {
   public function testFirstPatternLeftShouldBe1()
   {
-    $captcha = new Captcha(1, 1, 1, 1);
+    $DUMMY_OPERATOR = 1;
+    $DUMMY_RIGHT    = 1;
+    $captcha = new Captcha(1, 1, $DUMMY_OPERATOR, $DUMMY_RIGHT);
     assertThat("1", is(equalTo($captcha->getLeftOperand())));
   }
   public function testFirstPatternLeftShouldBe2()
